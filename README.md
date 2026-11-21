@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cruci & Placări Morminte | Lucrări funerare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --card: #171717;
+      --text: #f2efe9;
+      --muted: #a39e94;
+      --gold: #c9a84c;
+      --gold-hover: #d4b96a;
+      --border: #2a2a2a;
+    }
 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(14,14,14,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: var(--text);
+    }
+
+    .logo span { color: var(--gold); }
+
+    .phone-btn {
+      background: var(--gold);
+      color: #111;
+      padding: 0.7rem 1.4rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+
+    .phone-btn:hover {
+      background: var(--gold-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 8rem 1.5rem 4rem;
+      background: 
+        radial-gradient(ellipse at 50% 20%, rgba(201,168,76,0.09) 0%, transparent 55%),
+        linear-gradient(180deg, #0e0e0e 0%, #141414 100%);
+    }
+
+    .hero-label {
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 7vw, 4.8rem);
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      max-width: 900px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #111;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* Sections */
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 5.5rem 0;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 3.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.2rem;
+      text-align: center;
+      transition: all 0.35s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(201,168,76,0.4);
+      transform: translateY(-6px);
+    }
+
+    .service-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+      color: var(--gold);
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.98rem;
+      font-weight: 300;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .gallery-item {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--card);
+      transition: all 0.35s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-item .caption {
+      padding: 1.2rem 1.4rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Contact */
+    .contact {
+      background: linear-gradient(180deg, #141414 0%, #0e0e0e 100%);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .contact-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3.5rem 2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-box h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+    }
+
+    .big-phone {
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .big-phone:hover {
+      color: var(--gold-hover);
+    }
+
+    .contact-note {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 1rem 1.2rem; }
+      .hero { padding-top: 7rem; }
+      .big-phone { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Cruci <span>&</span> Morminte</div>
+    <a href="tel:0768445419" class="phone-btn">0768 445 419</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-label">Lucrări funerare de calitate</div>
+    <h1>Cruci & Placări<br>Morminte</h1>
+    <p>Realizăm cruci din marmură și granit, placări complete de morminte și monumente funerare personalizate.</p>
+    <div class="hero-buttons">
+      <a href="tel:0768445419" class="btn-primary">Sună acum</a>
+      <a href="#galerie" class="btn-secondary">Vezi lucrări</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Ce oferim</h2>
+      <p class="section-subtitle">Lucrări realizate cu respect și atenție la detalii</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Cruci</h3>
+          <p>Cruci din marmură și granit, în diverse modele și dimensiuni, personalizate după dorința familiei.</p>
+        </div>
+        <div class="service-card">
+          <h3>Placări morminte</h3>
+          <p>Placări complete cu granit sau marmură, borduri, vase și accesorii funerare.</p>
+        </div>
+        <div class="service-card">
+          <h3>Monumente</h3>
+          <p>Monumente funerare personalizate, cu fotografii, texte și elemente decorative.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galerie">
+    <div class="container">
+      <h2 class="section-title">Lucrări realizate</h2>
+      <p class="section-subtitle">Exemple din lucrările noastre</p>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/cruce1.jpg" alt="Monument funerar cu înger">
+          <div class="caption">Monument personalizat cu înger și fotografie</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/cruce2.jpg" alt="Cruce din marmură">
+          <div class="caption">Cruce din marmură cu inscripție</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/cruce3.jpg" alt="Placare mormânt granit">
+          <div class="caption">Placare completă din granit</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Pentru detalii</h2>
+        <p>Contactează-ne pentru oferte și consultanță. Răspundem rapid.</p>
+        <a href="tel:0768445419" class="big-phone">0768 445 419</a>
+        <p class="contact-note">Disponibili pentru informații și programări</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Cruci & Placări Morminte — Lucrări funerare cu respect</p>
+  </footer>
+
+</body>
+</html>
