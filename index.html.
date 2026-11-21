@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KIRU FUNERALE | Respect și Demnitate</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #101010;
+    color: #eee;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #080808;
+    padding: 24px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #a88946;
+}
+
+.logo {
+    color: #d4af62;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: #eee;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af62;
+}
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(#000b, #000b),
+    url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80') center/cover;
+}
+
+.hero h1 {
+    font-size: 55px;
+    color: #d4af62;
+    letter-spacing: 5px;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 19px;
+    color: #ddd;
+}
+
+.btn {
+    display: inline-block;
+    background: #b9954d;
+    color: #111;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #e2c17b;
+}
+
+section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+h2 {
+    color: #d4af62;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.intro {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+    color: #bbb;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.product {
+    background: #1c1c1c;
+    border: 1px solid #393023;
+    padding: 30px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    border-color: #d4af62;
+    transform: translateY(-5px);
+}
+
+.product .symbol {
+    font-size: 55px;
+    color: #d4af62;
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    color: #d4af62;
+    margin-bottom: 12px;
+}
+
+.product p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+#despre {
+    background: #171717;
+}
+
+#contact {
+    background: #0b0b0b;
+}
+
+.contact-info {
+    margin-top: 25px;
+    line-height: 2.2;
+    color: #ccc;
+}
+
+footer {
+    text-align: center;
+    background: #050505;
+    color: #888;
+    padding: 25px;
+    border-top: 1px solid #725d35;
+    font-size: 13px;
+}
+
+@media(max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 7px;
+        display: inline-block;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">KIRU FUNERALE</div>
+
+    <nav>
+        <a href="#acasa">Acasă</a>
+        <a href="#produse">Produse</a>
+        <a href="#despre">Despre noi</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="acasa">
+    <h1>KIRU FUNERALE</h1>
+    <p>Respect, demnitate și grijă în momente dificile.</p>
+    <a href="#produse" class="btn">Descoperă produsele</a>
+</div>
+
+<section id="produse">
+    <h2>Produsele noastre</h2>
+    <p class="intro">
+        Descoperă gama noastră de produse comemorative,
+        realizate pentru a păstra vie amintirea celor dragi.
+    </p>
+
+    <div class="products">
+
+        <div class="product">
+            <div class="symbol">✝</div>
+            <h3>Cruci funerare</h3>
+            <p>Modele de cruci funerare pentru diferite preferințe și nevoi.</p>
+        </div>
+
+        <div class="product">
+            <div class="symbol">◇</div>
+            <h3>Monumente</h3>
+            <p>Monumente comemorative și soluții personalizate.</p>
+        </div>
+
+        <div class="product">
+            <div class="symbol">❖</div>
+            <h3>Produse comemorative</h3>
+            <p>Articole pentru comemorarea și păstrarea amintirilor.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="despre">
+    <h2>Despre KIRU</h2>
+    <p class="intro">
+        KIRU FUNERALE își propune să ofere produse și informații
+        într-un mod respectuos, transparent și atent la nevoile
+        fiecărei familii.
+    </p>
+</section>
+
+<section id="contact">
+    <h2>Contactează-ne</h2>
+    <p class="intro">
+        Pentru informații despre produse, disponibilitate și oferte,
+        ne poți contacta.
+    </p>
+
+    <div class="contact-info">
+        <p>Telefon: [Adaugă numărul de telefon]</p>
+        <p>Email: [Adaugă adresa de email]</p>
+        <p>Locație: [Adaugă localitatea]</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 KIRU FUNERALE. Toate drepturile rezervate.
+</footer>
+
+</body>
+</html>
