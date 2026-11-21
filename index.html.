@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cruci – Simboluri și Semnificații</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: #2c2c2c;
+      background: #f8f6f3;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      color: #f5f0e6;
+      text-align: center;
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: #1a1a1a;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid #c9a227;
+      display: inline-block;
+    }
+
+    .intro {
+      font-size: 1.15rem;
+      color: #444;
+      max-width: 800px;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+
+    .card-img {
+      height: 220px;
+      background: #e8e4dc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 0.95rem;
+      position: relative;
+    }
+
+    .card-img span {
+      background: rgba(255,255,255,0.85);
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card-body h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.6rem;
+      color: #1a1a1a;
+    }
+
+    .card-body p {
+      font-size: 0.98rem;
+      color: #555;
+    }
+
+    .history {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .history p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: #bbb;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #c9a227;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CRUCI</h1>
+    <p>Simboluri sacre de-a lungul istoriei și credinței</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>Despre Cruce</h2>
+      <p class="intro">
+        Crucea este unul dintre cele mai vechi și mai puternice simboluri ale omenirii. 
+        În creștinism reprezintă jertfa și învierea lui Iisus Hristos, dar formele ei 
+        apar în multe culturi și tradiții, fiecare cu propria semnificație.
+      </p>
+    </section>
+
+    <section>
+      <h2>Tipuri de cruci</h2>
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-img">
+            <span>Adaugă poza aici</span>
+          </div>
+          <div class="card-body">
+            <h3>Crucea Latină</h3>
+            <p>Cea mai cunoscută formă. Brațul vertical este mai lung decât cel orizontal. Simbolul principal al creștinismului occidental.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <span>Adaugă poza aici</span>
+          </div>
+          <div class="card-body">
+            <h3>Crucea Greacă</h3>
+            <p>Brațele au aceeași lungime. Este folosită frecvent în tradiția ortodoxă și în arhitectura bisericilor.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <span>Adaugă poza aici</span>
+          </div>
+          <div class="card-body">
+            <h3>Crucea Ortodoxă</h3>
+            <p>Are trei bare orizontale: cea de sus pentru titlul „INRI”, cea din mijloc pentru brațele lui Hristos și cea de jos înclinată.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <span>Adaugă poza aici</span>
+          </div>
+          <div class="card-body">
+            <h3>Crucea Celtică</h3>
+            <p>Crucea latină înconjurată de un cerc. Foarte răspândită în Irlanda și Scoția, simbol al veșniciei.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <span>Adaugă poza aici</span>
+          </div>
+          <div class="card-body">
+            <h3>Crucea Sfântului Andrei</h3>
+            <p>Formă de X. Potrivit tradiției, Sfântul Andrei a fost răstignit pe o astfel de cruce.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <span>Adaugă poza aici</span>
+          </div>
+          <div class="card-body">
+            <h3>Crucea de Malta</h3>
+            <p>Cu brațe care se lărgesc spre exterior. Asociată cu Ordinul Cavalerilor de Malta.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Semnificație</h2>
+      <div class="history">
+        <p>
+          În creștinism, crucea reprezintă victoria asupra morții prin Înviere. 
+          Este simbol al speranței, al jertfei și al iubirii divine.
+        </p>
+        <p>
+          În contextul funerar, crucea de pe mormânt amintește de credința în viața veșnică 
+          și de legătura dintre cei care au plecat și cei care au rămas.
+        </p>
+        <p>
+          De-a lungul secolelor, forma crucii a fost adaptată în artă, arhitectură și tradiții 
+          populare, rămânând însă un simbol universal de respect și aducere aminte.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Site realizat cu respect pentru tradiție și memorie</p>
+  </footer>
+
+</body>
+</html>
