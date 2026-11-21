@@ -1067,7 +1067,7 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && lightbox.classList.contains('active')) {
         closeLightbox();
-      }
+      }https://github.com/dumitrudenis1997-beep/kirufunerale/blob/main/index.html
     });
 
     // Formular WhatsApp
@@ -1082,16 +1082,14 @@
       window.open(url, '_blank', 'noopener');
     }
   </script>
-  <!-- SISTEM RECENZII AVANSAT - KIRU FUNERALE -->
 <section id="recenzii-avansat" class="kf-reviews-wrap">
   <div class="kf-reviews-inner">
     <div class="kf-reviews-top">
       <div>
         <h2 class="kf-reviews-heading">Recenzii și Păreri</h2>
-        <p class="kf-reviews-sub">Experiențele celor care au apelat la serviciile oferite</p>
+        <p class="kf-reviews-sub">Experiențele celor care au ales cruci din marmură și granit</p>
       </div>
 
-      <!-- Rezumat stele -->
       <div class="kf-rating-box" id="kfRatingSummary">
         <div class="kf-avg-score" id="kfAvgScore">5.0</div>
         <div>
@@ -1101,7 +1099,6 @@
       </div>
     </div>
 
-    <!-- Filtrare recenzii -->
     <div class="kf-filter-bar" id="kfFilterBar">
       <button type="button" class="kf-filter-btn active" data-filter="all">Toate</button>
       <button type="button" class="kf-filter-btn" data-filter="5">5 ★</button>
@@ -1111,10 +1108,8 @@
       <button type="button" class="kf-filter-btn" data-filter="1">1 ★</button>
     </div>
 
-    <!-- Lista recenzii -->
     <div class="kf-reviews-grid" id="kfReviewsGrid"></div>
 
-    <!-- Formular trimitere recenzie -->
     <div class="kf-form-box">
       <h3>Lasă o recenzie</h3>
       <p class="kf-form-note">Recenziile sunt verificate înainte de publicare pentru a păstra pagina curată și respectuoasă.</p>
@@ -1131,8 +1126,8 @@
           </div>
 
           <div class="kf-field">
-            <label for="kfModel">Model / Tip cruce (opțional)</label>
-            <input type="text" id="kfModel" name="Model_Cruce" placeholder="Ex: Cruce lemn / metal">
+            <label for="kfModel">Material cruce (opțional)</label>
+            <input type="text" id="kfModel" name="Material_Cruce" placeholder="Ex: Granit sau Marmură">
           </div>
         </div>
 
@@ -1149,7 +1144,7 @@
 
         <div class="kf-field">
           <label for="kfMessage">Mesajul dumneavoastră *</label>
-          <textarea id="kfMessage" name="Mesaj" rows="4" required maxlength="600" placeholder="Scrieți câteva cuvinte despre lucrare, punctualitate sau comunicare..."></textarea>
+          <textarea id="kfMessage" name="Mesaj" rows="4" required maxlength="600" placeholder="Scrieți câteva cuvinte despre crucea din marmură sau granit, gravură, transport sau comunicare..."></textarea>
           <div class="kf-char-counter"><span id="kfCharCount">0</span> / 600 caractere</div>
         </div>
 
@@ -1403,21 +1398,20 @@
 
 <script>
   (function () {
-    // Adaugă sau modifică aici recenziile aprobate care apar pe site:
     const RECENZII_APROBATE = [
       {
         nume: "Vasile P.",
         stele: 5,
         data: "Octombrie 2026",
-        model: "Cruce lemn",
-        mesaj: "Lucrare curată și făcută repede exact așa cum am discutat la telefon. Seriozitate și mult bun-simț."
+        model: "Cruce granit",
+        mesaj: "Cruce din granit lucrată foarte îngrijit, cu scris clar și rezistent. Seriozitate și comunicare bună de la început."
       },
       {
         nume: "Elena D.",
         stele: 5,
         data: "Septembrie 2026",
-        model: "Cruce metal",
-        mesaj: "Am primit ajutor prompt într-un moment greu. Crucile arată foarte bine, iar inscripția este clară și îngrijită."
+        model: "Cruce marmură",
+        mesaj: "Am apelat pentru o cruce din marmură. Lucrarea a ieșit curată, cu finisaje atente și livrare la timp."
       }
     ];
 
@@ -1535,4 +1529,3 @@
   })();
 </script>
 </body>
-
