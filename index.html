@@ -1083,4 +1083,31 @@
     }
   </script>
 </body>
+
+<div id="recenzii" style="max-width:600px; margin:40px auto; padding:20px; background:#1c1c1c; color:#fff; border-radius:8px; font-family:sans-serif;">
+  <h2 style="text-align:center; color:#d4af37;">Lasă o recenzie</h2>
+
+  <form action="https://formsubmit.co/EMAILUL_TAU@gmail.com" method="POST" style="display:flex; flex-direction:column; gap:12px;">
+    <input type="hidden" name="_subject" value="Recenzie nouă - Kiru Funerale">
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="text" name="Nume" placeholder="Numele tău" required style="padding:10px; border-radius:5px; border:none;">
+
+    <select name="Stele" required style="padding:10px; border-radius:5px; border:none;">
+      <option value="">Alege stele</option>
+      <option value="5 stele">★★★★★ (5 stele)</option>
+      <option value="4 stele">★★★★☆ (4 stele)</option>
+      <option value="3 stele">★★★☆☆ (3 stele)</option>
+      <option value="2 stele">★★☆☆☆ (2 stele)</option>
+      <option value="1 stea">★☆☆☆☆ (1 stea)</option>
+    </select>
+
+    <textarea name="Mesaj" rows="4" placeholder="Scrie recenzia..." required style="padding:10px; border-radius:5px; border:none;"></textarea>
+
+    <button type="submit" style="padding:12px; background:#d4af37; color:#000; font-weight:bold; border:none; border-radius:5px; cursor:pointer;">
+      Trimite recenzia
+    </button>
+  </form>
+</div>
+</body>
 </html>
