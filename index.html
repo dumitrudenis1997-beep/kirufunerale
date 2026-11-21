@@ -3,260 +3,381 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cruci – Simboluri și Semnificații</title>
+  <title>Cruci & Placări Morminte | Lucrări funerare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --bg: #0e0e0e;
+      --card: #171717;
+      --text: #f2efe9;
+      --muted: #a39e94;
+      --gold: #c9a84c;
+      --gold-hover: #d4b96a;
+      --border: #2a2a2a;
     }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
-      color: #2c2c2c;
-      background: #f8f6f3;
     }
 
+    /* Header */
     header {
-      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-      color: #f5f0e6;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(14,14,14,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: var(--text);
+    }
+
+    .logo span { color: var(--gold); }
+
+    .phone-btn {
+      background: var(--gold);
+      color: #111;
+      padding: 0.7rem 1.4rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+
+    .phone-btn:hover {
+      background: var(--gold-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 4rem 1.5rem 3rem;
+      padding: 8rem 1.5rem 4rem;
+      background: 
+        radial-gradient(ellipse at 50% 20%, rgba(201,168,76,0.09) 0%, transparent 55%),
+        linear-gradient(180deg, #0e0e0e 0%, #141414 100%);
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: 300;
+    .hero-label {
+      font-size: 0.8rem;
       letter-spacing: 3px;
-      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      font-weight: 500;
     }
 
-    header p {
-      font-size: 1.15rem;
-      opacity: 0.85;
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 7vw, 4.8rem);
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      max-width: 900px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #111;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* Sections */
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 5.5rem 0;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 3.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.2rem;
+      text-align: center;
+      transition: all 0.35s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(201,168,76,0.4);
+      transform: translateY(-6px);
+    }
+
+    .service-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+      color: var(--gold);
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.98rem;
+      font-weight: 300;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .gallery-item {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--card);
+      transition: all 0.35s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-item .caption {
+      padding: 1.2rem 1.4rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Contact */
+    .contact {
+      background: linear-gradient(180deg, #141414 0%, #0e0e0e 100%);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .contact-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3.5rem 2rem;
       max-width: 600px;
       margin: 0 auto;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-
-    section {
-      margin-bottom: 4rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 400;
-      color: #1a1a1a;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.6rem;
-      border-bottom: 2px solid #c9a227;
-      display: inline-block;
-    }
-
-    .intro {
-      font-size: 1.15rem;
-      color: #444;
-      max-width: 800px;
-      margin-bottom: 2rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-    }
-
-    .card-img {
-      height: 220px;
-      background: #e8e4dc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #999;
-      font-size: 0.95rem;
-      position: relative;
-    }
-
-    .card-img span {
-      background: rgba(255,255,255,0.85);
-      padding: 0.4rem 0.9rem;
-      border-radius: 20px;
-    }
-
-    .card-body {
-      padding: 1.5rem;
-    }
-
-    .card-body h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.6rem;
-      color: #1a1a1a;
-    }
-
-    .card-body p {
-      font-size: 0.98rem;
-      color: #555;
-    }
-
-    .history {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    }
-
-    .history p {
+    .contact-box h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
       margin-bottom: 1rem;
-      color: #444;
     }
 
-    footer {
-      background: #1a1a1a;
-      color: #bbb;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.95rem;
+    .contact-box p {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
     }
 
-    footer a {
-      color: #c9a227;
+    .big-phone {
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--gold);
       text-decoration: none;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .big-phone:hover {
+      color: var(--gold-hover);
+    }
+
+    .contact-note {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.1rem;
-      }
+      header { padding: 1rem 1.2rem; }
+      .hero { padding-top: 7rem; }
+      .big-phone { font-size: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>CRUCI</h1>
-    <p>Simboluri sacre de-a lungul istoriei și credinței</p>
+    <div class="logo">Cruci <span>&</span> Morminte</div>
+    <a href="tel:0768445419" class="phone-btn">0768 445 419</a>
   </header>
 
-  <div class="container">
+  <section class="hero">
+    <div class="hero-label">Lucrări funerare de calitate</div>
+    <h1>Cruci & Placări<br>Morminte</h1>
+    <p>Realizăm cruci din marmură și granit, placări complete de morminte și monumente funerare personalizate.</p>
+    <div class="hero-buttons">
+      <a href="tel:0768445419" class="btn-primary">Sună acum</a>
+      <a href="#galerie" class="btn-secondary">Vezi lucrări</a>
+    </div>
+  </section>
 
-    <section>
-      <h2>Despre Cruce</h2>
-      <p class="intro">
-        Crucea este unul dintre cele mai vechi și mai puternice simboluri ale omenirii. 
-        În creștinism reprezintă jertfa și învierea lui Iisus Hristos, dar formele ei 
-        apar în multe culturi și tradiții, fiecare cu propria semnificație.
-      </p>
-    </section>
+  <section>
+    <div class="container">
+      <h2 class="section-title">Ce oferim</h2>
+      <p class="section-subtitle">Lucrări realizate cu respect și atenție la detalii</p>
 
-    <section>
-      <h2>Tipuri de cruci</h2>
-      <div class="grid">
-
-        <div class="card">
-          <div class="card-img">
-            <span>Adaugă poza aici</span>
-          </div>
-          <div class="card-body">
-            <h3>Crucea Latină</h3>
-            <p>Cea mai cunoscută formă. Brațul vertical este mai lung decât cel orizontal. Simbolul principal al creștinismului occidental.</p>
-          </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Cruci</h3>
+          <p>Cruci din marmură și granit, în diverse modele și dimensiuni, personalizate după dorința familiei.</p>
         </div>
-
-        <div class="card">
-          <div class="card-img">
-            <span>Adaugă poza aici</span>
-          </div>
-          <div class="card-body">
-            <h3>Crucea Greacă</h3>
-            <p>Brațele au aceeași lungime. Este folosită frecvent în tradiția ortodoxă și în arhitectura bisericilor.</p>
-          </div>
+        <div class="service-card">
+          <h3>Placări morminte</h3>
+          <p>Placări complete cu granit sau marmură, borduri, vase și accesorii funerare.</p>
         </div>
-
-        <div class="card">
-          <div class="card-img">
-            <span>Adaugă poza aici</span>
-          </div>
-          <div class="card-body">
-            <h3>Crucea Ortodoxă</h3>
-            <p>Are trei bare orizontale: cea de sus pentru titlul „INRI”, cea din mijloc pentru brațele lui Hristos și cea de jos înclinată.</p>
-          </div>
+        <div class="service-card">
+          <h3>Monumente</h3>
+          <p>Monumente funerare personalizate, cu fotografii, texte și elemente decorative.</p>
         </div>
-
-        <div class="card">
-          <div class="card-img">
-            <span>Adaugă poza aici</span>
-          </div>
-          <div class="card-body">
-            <h3>Crucea Celtică</h3>
-            <p>Crucea latină înconjurată de un cerc. Foarte răspândită în Irlanda și Scoția, simbol al veșniciei.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <span>Adaugă poza aici</span>
-          </div>
-          <div class="card-body">
-            <h3>Crucea Sfântului Andrei</h3>
-            <p>Formă de X. Potrivit tradiției, Sfântul Andrei a fost răstignit pe o astfel de cruce.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <span>Adaugă poza aici</span>
-          </div>
-          <div class="card-body">
-            <h3>Crucea de Malta</h3>
-            <p>Cu brațe care se lărgesc spre exterior. Asociată cu Ordinul Cavalerilor de Malta.</p>
-          </div>
-        </div>
-
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Semnificație</h2>
-      <div class="history">
-        <p>
-          În creștinism, crucea reprezintă victoria asupra morții prin Înviere. 
-          Este simbol al speranței, al jertfei și al iubirii divine.
-        </p>
-        <p>
-          În contextul funerar, crucea de pe mormânt amintește de credința în viața veșnică 
-          și de legătura dintre cei care au plecat și cei care au rămas.
-        </p>
-        <p>
-          De-a lungul secolelor, forma crucii a fost adaptată în artă, arhitectură și tradiții 
-          populare, rămânând însă un simbol universal de respect și aducere aminte.
-        </p>
+  <section id="galerie">
+    <div class="container">
+      <h2 class="section-title">Lucrări realizate</h2>
+      <p class="section-subtitle">Exemple din lucrările noastre</p>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/cruce1.jpg" alt="Monument funerar cu înger">
+          <div class="caption">Monument personalizat cu înger și fotografie</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/cruce2.jpg" alt="Cruce din marmură">
+          <div class="caption">Cruce din marmură cu inscripție</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/cruce3.jpg" alt="Placare mormânt granit">
+          <div class="caption">Placare completă din granit</div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </div>
+  <section class="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Pentru detalii</h2>
+        <p>Contactează-ne pentru oferte și consultanță. Răspundem rapid.</p>
+        <a href="tel:0768445419" class="big-phone">0768 445 419</a>
+        <p class="contact-note">Disponibili pentru informații și programări</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>Site realizat cu respect pentru tradiție și memorie</p>
+    <p>Cruci & Placări Morminte — Lucrări funerare cu respect</p>
   </footer>
 
 </body>
