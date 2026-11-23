@@ -48,14 +48,14 @@
       padding: 0 1.5rem;
     }
 
-    /* Top bar / Header */
+    /* Header */
     header {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 100;
-      background: rgba(12, 12, 13, 0.88);
+      background: rgba(12, 12, 13, 0.9);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
@@ -165,12 +165,12 @@
 
     /* Hero */
     .hero {
-      min-height: 92vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       padding: 7.5rem 0 4.5rem;
       background:
-        radial-gradient(circle at 50% 18%, rgba(201, 168, 76, 0.13) 0%, transparent 52%),
+        radial-gradient(circle at 50% 18%, rgba(201, 168, 76, 0.14) 0%, transparent 52%),
         radial-gradient(circle at 85% 75%, rgba(201, 168, 76, 0.06) 0%, transparent 45%),
         linear-gradient(180deg, #0c0c0d 0%, #121215 100%);
       border-bottom: 1px solid var(--border);
@@ -343,7 +343,7 @@
       font-weight: 300;
     }
 
-    /* Gallery & Filter */
+    /* Gallery */
     .gallery-section {
       background: var(--bg-elevated);
       border-top: 1px solid var(--border);
@@ -552,6 +552,7 @@
     .contact-section {
       background: var(--bg-elevated);
       border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
     .contact-grid {
@@ -562,7 +563,8 @@
     }
 
     .contact-card,
-    .quote-form {
+    .quote-form,
+    .kf-review-form-box {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
@@ -570,13 +572,15 @@
     }
 
     .contact-card h2,
-    .quote-form h3 {
+    .quote-form h3,
+    .kf-review-form-box h3 {
       font-size: 2rem;
       margin-bottom: 0.7rem;
     }
 
     .contact-card p,
-    .quote-form p {
+    .quote-form p,
+    .kf-review-form-box p {
       color: var(--muted);
       font-size: 0.94rem;
       margin-bottom: 1.4rem;
@@ -630,6 +634,141 @@
       border-color: var(--gold);
     }
 
+    .form-status {
+      margin-top: 0.75rem;
+      font-size: 0.88rem;
+      color: #86efac;
+      min-height: 1.2rem;
+    }
+
+    /* Reviews Section */
+    .kf-reviews-wrap {
+      padding: 5.5rem 0;
+      background: var(--bg);
+    }
+
+    .kf-reviews-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .kf-reviews-heading {
+      font-size: clamp(2.1rem, 4.5vw, 3rem);
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .kf-reviews-sub {
+      color: var(--muted);
+      font-size: 0.96rem;
+      font-weight: 300;
+    }
+
+    .kf-rating-box {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--card);
+      border: 1px solid rgba(201, 168, 76, 0.35);
+      border-radius: 14px;
+      padding: 0.9rem 1.3rem;
+    }
+
+    .kf-avg-score {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .kf-avg-stars {
+      color: var(--gold);
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .kf-total-count {
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .kf-filter-bar {
+      display: flex;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .kf-filter-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.5rem 1.05rem;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .kf-filter-btn:hover,
+    .kf-filter-btn.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #111113;
+      font-weight: 600;
+    }
+
+    .kf-reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.35rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .kf-review-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    .kf-review-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .kf-review-author {
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--text);
+    }
+
+    .kf-review-stars {
+      color: var(--gold);
+      font-size: 0.92rem;
+      letter-spacing: 1px;
+    }
+
+    .kf-review-text {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 300;
+      margin-bottom: 0.7rem;
+    }
+
+    .kf-review-date {
+      font-size: 0.78rem;
+      color: #7c766d;
+    }
+
     /* Footer */
     footer {
       padding: 2.2rem 1.5rem;
@@ -637,7 +776,7 @@
       border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: 0.88rem;
-      background: var(--bg);
+      background: var(--bg-elevated);
     }
 
     /* Lightbox */
@@ -741,6 +880,7 @@
         <a href="#galerie">Galerie Lucrări</a>
         <a href="#proces">Cum Lucrăm</a>
         <a href="#faq">Întrebări</a>
+        <a href="#recenzii-avansat">Recenzii</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -997,8 +1137,66 @@
           </div>
 
           <button type="submit" class="btn btn-gold" style="width: 100%;">Trimite Cererea pe WhatsApp</button>
+          <div id="quoteStatus" class="form-status" aria-live="polite"></div>
         </form>
       </div>
+    </div>
+  </section>
+
+  <!-- Recenzii -->
+  <section id="recenzii-avansat" class="kf-reviews-wrap">
+    <div class="container">
+      <div class="kf-reviews-top">
+        <div>
+          <span class="section-kicker">Părerile Clienților</span>
+          <h2 class="kf-reviews-heading">Recenzii și Păreri</h2>
+          <p class="kf-reviews-sub">Experiențele familiilor care au ales lucrări din marmură și granit</p>
+        </div>
+
+        <div class="kf-rating-box" id="kfRatingSummary">
+          <div class="kf-avg-score" id="kfAvgScore">5.0</div>
+          <div>
+            <div class="kf-avg-stars" id="kfAvgStars">★★★★★</div>
+            <div class="kf-total-count" id="kfTotalCount">0 recenzii</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kf-filter-bar" id="kfFilterBar">
+        <button type="button" class="kf-filter-btn active" data-filter="all">Toate</button>
+        <button type="button" class="kf-filter-btn" data-filter="5">5 ★</button>
+        <button type="button" class="kf-filter-btn" data-filter="4">4 ★</button>
+        <button type="button" class="kf-filter-btn" data-filter="3">3 ★</button>
+      </div>
+
+      <div class="kf-reviews-grid" id="kfReviewsList"></div>
+
+      <form id="kfReviewForm" class="kf-review-form-box">
+        <h3>Lasă o recenzie</h3>
+        <p>Împărtășește-ne părerea ta despre lucrare, inscripție sau montaj.</p>
+
+        <div class="form-group">
+          <label for="kfReviewerName">Numele tău</label>
+          <input type="text" id="kfReviewerName" placeholder="Ex: Maria Ionescu" required>
+        </div>
+
+        <div class="form-group">
+          <label for="kfReviewerRating">Nota acordată</label>
+          <select id="kfReviewerRating">
+            <option value="5">5 ★ — Excelent</option>
+            <option value="4">4 ★ — Foarte bine</option>
+            <option value="3">3 ★ — Bine</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="kfReviewerText">Recenzia ta</label>
+          <textarea id="kfReviewerText" rows="3" placeholder="Scrie câteva cuvinte despre experiența ta..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-outline">Publică recenzia</button>
+        <div id="kfReviewStatus" class="form-status" aria-live="polite"></div>
+      </form>
     </div>
   </section>
 
@@ -1082,6 +1280,7 @@
       const numeEl = document.getElementById('nume');
       const modelEl = document.getElementById('model');
       const detaliiEl = document.getElementById('detalii');
+      const statusEl = document.getElementById('quoteStatus');
       const formEl = e && e.target ? e.target : document.getElementById('quoteForm');
 
       const nume = numeEl ? numeEl.value.trim() : '';
@@ -1096,10 +1295,147 @@
         window.location.href = url;
       }
 
+      if (statusEl) {
+        statusEl.textContent = 'Se deschide WhatsApp cu mesajul pregătit...';
+      }
+
       if (formEl && typeof formEl.reset === 'function') {
         formEl.reset();
       }
     }
+
+    // Sistem Recenzii
+    (function initReviews() {
+      const STORAGE_KEY = 'kiru_funerale_reviews_v1';
+      const reviewsListEl = document.getElementById('kfReviewsList');
+      const avgScoreEl = document.getElementById('kfAvgScore');
+      const avgStarsEl = document.getElementById('kfAvgStars');
+      const totalCountEl = document.getElementById('kfTotalCount');
+      const filterBarEl = document.getElementById('kfFilterBar');
+      const reviewFormEl = document.getElementById('kfReviewForm');
+      const reviewStatusEl = document.getElementById('kfReviewStatus');
+
+      if (!reviewsListEl) return;
+
+      let activeFilter = 'all';
+      let reviews = [];
+
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+        if (Array.isArray(saved)) {
+          reviews = saved;
+        }
+      } catch (err) {
+        reviews = [];
+      }
+
+      function renderStars(count) {
+        const n = Math.max(1, Math.min(5, Number(count) || 5));
+        return '★'.repeat(n) + '☆'.repeat(5 - n);
+      }
+
+      function updateSummary() {
+        const total = reviews.length;
+        if (!totalCountEl || !avgScoreEl || !avgStarsEl) return;
+
+        totalCountEl.textContent = total === 1 ? '1 recenzie' : `${total} recenzii`;
+
+        if (total === 0) {
+          avgScoreEl.textContent = '5.0';
+          avgStarsEl.textContent = '★★★★★';
+          return;
+        }
+
+        const sum = reviews.reduce((acc, item) => acc + (Number(item.rating) || 5), 0);
+        const avg = (sum / total).toFixed(1);
+        avgScoreEl.textContent = avg;
+        avgStarsEl.textContent = renderStars(Math.round(Number(avg)));
+      }
+
+      function renderReviews() {
+        const filtered = activeFilter === 'all'
+          ? reviews
+          : reviews.filter((item) => String(item.rating) === String(activeFilter));
+
+        if (!filtered.length) {
+          reviewsListEl.innerHTML = `
+            <div class="kf-review-card">
+              <p class="kf-review-text" style="margin: 0;">Nu există încă recenzii afișate pentru acest filtru. Poți fi primul care lasă o părere mai jos.</p>
+            </div>
+          `;
+          return;
+        }
+
+        reviewsListEl.innerHTML = filtered
+          .map((item) => {
+            const safeName = String(item.name || 'Client').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            const safeText = String(item.text || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            const safeDate = String(item.date || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return `
+              <article class="kf-review-card">
+                <div class="kf-review-head">
+                  <span class="kf-review-author">${safeName}</span>
+                  <span class="kf-review-stars">${renderStars(item.rating)}</span>
+                </div>
+                <p class="kf-review-text">${safeText}</p>
+                <span class="kf-review-date">${safeDate}</span>
+              </article>
+            `;
+          })
+          .join('');
+      }
+
+      if (filterBarEl) {
+        filterBarEl.addEventListener('click', (e) => {
+          const btn = e.target.closest('.kf-filter-btn');
+          if (!btn) return;
+          activeFilter = btn.getAttribute('data-filter') || 'all';
+          filterBarEl.querySelectorAll('.kf-filter-btn').forEach((b) => {
+            b.classList.toggle('active', b === btn);
+          });
+          renderReviews();
+        });
+      }
+
+      if (reviewFormEl) {
+        reviewFormEl.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const nameInput = document.getElementById('kfReviewerName');
+          const ratingInput = document.getElementById('kfReviewerRating');
+          const textInput = document.getElementById('kfReviewerText');
+
+          const name = nameInput ? nameInput.value.trim() : '';
+          const rating = ratingInput ? Number(ratingInput.value) : 5;
+          const text = textInput ? textInput.value.trim() : '';
+
+          if (!name || !text) return;
+
+          const newReview = {
+            name,
+            rating,
+            text,
+            date: new Date().toLocaleDateString('ro-RO')
+          };
+
+          reviews.unshift(newReview);
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(reviews));
+          } catch (err) {
+            // ignoră erorile de storage
+          }
+
+          updateSummary();
+          renderReviews();
+          reviewFormEl.reset();
+          if (reviewStatusEl) {
+            reviewStatusEl.textContent = 'Recenzia a fost adăugată.';
+          }
+        });
+      }
+
+      updateSummary();
+      renderReviews();
+    })();
   </script>
 </body>
 </html>
