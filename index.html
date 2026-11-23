@@ -1528,39 +1528,4 @@
     renderReviews();
   })();
 </script>
-  <form id="quickOfferForm">
-  <input type="text" id="offerName" name="nume" placeholder="Numele tău" required>
-  <input type="tel" id="offerPhone" name="telefon" placeholder="Număr de telefon" required>
-  <textarea id="offerMessage" name="mesaj" placeholder="Detalii lucrare (cruci, marmură/granit, dimensiuni)..." required></textarea>
-  <button type="submit">Trimite pe WhatsApp</button>
-</form>
-
-<script>
-  (function () {
-    const form = document.getElementById("quickOfferForm");
-    if (!form) return;
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const nume = (document.getElementById("offerName")?.value || "").trim();
-      const telefon = (document.getElementById("offerPhone")?.value || "").trim();
-      const mesajDetalii = (document.getElementById("offerMessage")?.value || "").trim();
-
-      const whatsappNumber = "40768445419";
-      const textWhatsApp = [
-        "Bună ziua! Doresc o ofertă rapidă.",
-        nume ? `Nume: ${nume}` : "",
-        telefon ? `Telefon: ${telefon}` : "",
-        mesajDetalii ? `Detalii: ${mesajDetalii}` : ""
-      ]
-        .filter(Boolean)
-        .join("\n");
-
-      const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(textWhatsApp)}`;
-      window.open(waUrl, "_blank", "noopener,noreferrer");
-      form.reset();
-    });
-  })();
-</script>
 </body>
